@@ -1,0 +1,129 @@
+section.text {
+    padding: 1.5em;
+}
+
+.text-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+.text-description h1 {
+    font-size: 1.75rem;
+}
+
+.text-description p {
+    font-size: 0.9rem;
+}
+
+.text-description span {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Product Pricing */
+.text-pricing {
+    margin-top: 1.5em;
+}
+
+.text-pricing_price {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.product-price {
+    font-size: 1.65rem;
+    font-weight: 700;
+
+}
+
+.product-discount {
+    font-weight: 700;
+    font-size: 0.8rem;
+    background-color: var(--paleOrange);
+    border-radius: 7px;
+    padding: 0.3em 0.50em;
+    color: var(--orange);
+}
+
+.product-markdown {
+    font-weight: 700;
+    color: var(--grayBlue);
+    font-size: 0.8rem;
+    text-decoration:line-through 1.5px;
+    flex: 1;
+    text-align: right;
+}
+
+/* Product counter */
+.text-pricing_counter {
+    background-color: var(--lightGrayBlue);
+    height: 3.1em;
+    border-radius: 10px;
+    display: flex;  
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+    margin-top: 1.25em;
+}
+
+.minus {
+    background-image: url(../images/icon-minus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+.plus {
+    background-image: url(../images/icon-plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+.count {
+    font-weight: 700;
+
+}
+
+/* Add to cart button */
+.text-pricing_button {
+    margin-top: 1em;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    height: 3.5em;
+    
+    /* vertical-align: middle;
+
+    display: flex;
+    justify-content: center; */
+    
+    cursor: pointer;
+}
+
+.text-pricing_button img{
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    filter: brightness(0) invert(1);
+    
+}
+
+.text-pricing_button span{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* .cart-image {
+    background-image: url(../images/icon-cart.svg);
+    background-repeat: no-repeat;
+    height: auto;
+    width: 20px;
+} */

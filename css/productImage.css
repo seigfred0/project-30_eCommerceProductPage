@@ -1,0 +1,34 @@
+section.images {
+    position: relative;
+}
+
+.circle-button {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5em;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 40%;
+}
+
+.circle-button img {
+    width: 11px;
+    height: 15px;
+    justify-self: center;
+}
+
+.prev-btn {
+    left: 1em;
+}
+
+.next-btn {
+    right: 1em;
+}

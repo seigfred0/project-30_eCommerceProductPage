@@ -76,6 +76,8 @@ section.text {
     background-position: center;
     width: 20px;
     height: 20px;
+
+    cursor: pointer;
 }
 
 .plus {
@@ -84,6 +86,8 @@ section.text {
     background-position: center;
     width: 20px;
     height: 20px;
+
+    cursor: pointer;
 }
 .count {
     font-weight: 700;
@@ -98,32 +102,21 @@ section.text {
     border: none;
     background-color: var(--orange);
     color: var(--white);
-    height: 3.5em;
-    
-    /* vertical-align: middle;
-
-    display: flex;
-    justify-content: center; */
-    
+    height: 3.75em;
     cursor: pointer;
 }
 
 .text-pricing_button img{
     display: inline-block;
-    height: 13px;
-    width: 13px;
+    width: 15px;
+    object-fit: contain;
     filter: brightness(0) invert(1);
-    
+    position: relative;
+    right: 0.3em;
 }
 
 .text-pricing_button span{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
-}
 
-/* .cart-image {
-    background-image: url(../images/icon-cart.svg);
-    background-repeat: no-repeat;
-    height: auto;
-    width: 20px;
-} */
+}

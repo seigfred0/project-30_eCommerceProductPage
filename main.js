@@ -1,3 +1,22 @@
+// Mobile Side Nav
+const openSideNav = document.querySelector('.openBtn');
+const closeSideNav = document.querySelector('.closeBtn');
+const sideNav = document.querySelector('.sideNav');
+
+openSideNav.addEventListener('click', () => {
+    sideNav.style.width = '250px'
+    document.body.classList.toggle('darken')
+  
+});
+
+closeSideNav.addEventListener('click', () => {
+    sideNav.style.width = '0px';
+    document.body.classList.toggle('darken')
+
+});
+
+
+
 
 
 // Add To Cart Section

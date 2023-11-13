@@ -18,14 +18,15 @@
 </head>
 <body>
 
+  <div class="overlay"></div>
   <nav>
-    <div class="burger-icon">
+    <div class="burger-icon openBtn">
       <i class="fas fa-bars fa-lg custom-icon"></i>
     </div>
 
     <!-- Side Nav -->
     <div class="sideNav">
-
+      <img class="closeBtn" src="images/icon-close.svg" alt="">
       <a href="#">Collections</a>
       <a href="#">Men</a>
       <a href="#">Women</a>
@@ -54,9 +55,16 @@
       </div>
 
       <!-- Previous and Next Button -->
-      <button class="circle-button prev-btn"><img src="images/icon-previous.svg" alt=""></button>
-      <button class="circle-button next-btn"><img src="images/icon-next.svg" alt=""></button>
-
+      <!-- <button class="circle-button prev-btn"><img src="images/icon-previous.svg" alt=""></button>
+      <button class="circle-button next-btn"><img src="images/icon-next.svg" alt=""></button> -->
+    
+    
+      <button class="circle-button prev-btn">
+        <div class="icon2 previousIcon"></div>
+      </button>
+      <button class="circle-button next-btn">
+        <div class="icon2 nextIcon"></div>
+      </button>
 
     </section> 
 

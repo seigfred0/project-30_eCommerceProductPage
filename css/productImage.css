@@ -29,7 +29,7 @@ section.images {
     background-size: contain;
     background-repeat: no-repeat;
   
-    filter: hue-rotate(90deg);
+    /* filter: var(--filter); */
 }
 
 .nextIcon {
@@ -40,8 +40,6 @@ section.images {
     background-repeat: no-repeat;
 }
 
-
-
 .prev-btn {
     left: 1em;
     
@@ -50,3 +48,10 @@ section.images {
 .next-btn {
     right: 1em;
 }
+
+/* .my-slides img{
+    position: relative;
+    
+    background-size: cover;
+} */
+

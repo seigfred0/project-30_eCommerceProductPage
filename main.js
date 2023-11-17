@@ -23,9 +23,12 @@ closeSideNav.addEventListener('click', () => {
 
 
 // Add To Cart Section
+const addToCartBtn = document.querySelector("#addToCartBtn");
 const plustBtn = document.querySelector('.plus');
 const minusBtn = document.querySelector('.minus');
+const emptyCart = document.querySelector('#emptyCart');
 let displayCount = document.querySelector('.count');
+let state = false;
 let count = 0;
 
 plustBtn.addEventListener('click', addAmount)
@@ -45,7 +48,29 @@ function minusAmount() {
     }
 }
 
+addToCartBtn.addEventListener("click", () => {
+    let numberOfProducts = count
+    if(!numberOfProducts == 0) {
+        emptyCart.style.display = 'none';
+        addProductCart(numberOfProducts);
+        state = true
+        displayNotification(state, numberOfProducts);
+    }
+})
 
+function displayNotification(state, numberOfProducts) {
+    const notifContainer = document.querySelector('.notification');
+    const notifCounter = document.querySelector('#notification-counter');
+    
+    if(state) {
+        notifContainer.style.display = 'block';
+        notifCounter.innerHTML = `${numberOfProducts}`;
+    } else {
+        notifContainer.style.display = 'none';
+
+    }
+    
+}
 
 
 // Mobile Slide Show Product
@@ -111,30 +136,54 @@ const product = {
 };
 
 
-function addProductCart() {
+function addProductCart(productCount) {
+    const count = productCount;
+    const price = 125.00.toFixed(2);
+    const total = (price * count).toFixed(2);
+    let productInBasket;
 
-    
+    const parentCheck = document.querySelector('.cart-product');
+    const childCheck = document.querySelector('.selected-product');
 
-    const productInBasket = `
-        <div class="selected-product">
-            <img class="basket-pic" src="images/image-product-1.jpg" alt="">
-            <div class="product-info">
-                <p>Fall Limited Edition Sneaker</p>
-                <p>$125.00 x 3 <span class="heavy total-price">$375.00</span></p>
+    if(!parentCheck.contains(childCheck)) {
+        productInBasket = `
+            <div class="selected-product">
+                <img class="basket-pic" src="images/image-product-1.jpg" alt="">
+                <div class="product-info">
+                    <p>Fall Limited Edition Sneaker</p>
+                    <p>$${price} x ${count} <span class="heavy total-price">$${total}</span></p>
+                </div>
+                <div class="product-delete">
+                    <img class="icon" src="images/icon-delete.svg" alt="">
+                </div>
             </div>
-            <div class="product-delete">
-                <img class="icon" src="images/icon-delete.svg" alt="">
-            </div>
-        </div>
-        <button id="checkoutBtn" class="checkout">Checkout</button>
-    `;
+            <button id="checkoutBtn" class="checkout">Checkout</button>
+        `;
+
+    } else {
+        
+        return
+    }
+
+   
 
     const productContainer = document.querySelector('.cart-product');
     productContainer.innerHTML += productInBasket;
+    deleteProduct(productContainer);
 }
 
-console.log(product.name)
-
+function deleteProduct(productContainer) {
+    const deleteItem = document.querySelector('.product-delete');
+    const showEmpty = emptyCart;
+    deleteItem.addEventListener("click", () => {
+        productContainer.innerHTML = ``;
+        // productInBasket = "";
+        count = 0;
+        displayCount.textContent = 0;
+        emptyCart.style.display = "block";
+        displayNotification(false, null)
+    })
+}
 
 
 // END OF CAR/BASKET SECTION

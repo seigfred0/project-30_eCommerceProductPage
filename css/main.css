@@ -56,9 +56,11 @@ body {
 
     /* NAVIGATION */
     nav {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 2em;
+        padding: 2em 0;
+        border-bottom: 1px solid rgba(110, 110, 110, 0.519);
+
     }
 
     .mobile {
@@ -70,26 +72,96 @@ body {
         position: block;
         height: auto;
         display: flex;
-        gap: 1.5em;
+        gap: 2em;
         margin-left: 2em;
+     
     }
 
     .nav-desktop a {
         text-decoration: none;
         color: var(--darkGrayBlue);
+        cursor: pointer;
+        position: relative;
     }
 
-    .nav-customer_profile {
-        padding-right: 3.5em;
+    .nav-desktop a:hover {
+        color: var(--black);
     }
+
+    .nav-desktop a:hover::after {
+        content: "";
+        display: block; 
+        position: absolute;
+        top: 3.55em;
+        left: 0;    
+        width: 100%;
+        height: 4px;
+        background-color: var(--orange);
+    }
+
+    /* .nav-customer_profile {
+        padding-right: 3.5em;
+    } */
 
  
 
     #avatar {
         width: 45px;
         margin-left: 1em;
+
     }
 
+    /* #avatar:hover {
+        outline: 2px solid var(--orange);
+        border-radius: 50%;
+        cursor: pointer;
+    } */
+
+    .cart-container {
+        background-color: white;
+        width: 90%;
+        max-width: 350px;
+        height: 30%;
+        border-radius: 14px;
+       
+        position: absolute; 
+        margin-left: auto;
+        margin-right: 0;
+        top: 3%;
+        left: 0;
+        right: 10em;
+        top: 5em;
+        z-index: 10;
+    
+        box-shadow: 0px 15px 36px -15px rgb(53, 53, 53);
+        display: none;
+    }
+
+    
+    .notification {
+        width: 19px;
+        height: 12px;
+        background-color: var(--orange);
+        position: absolute;
+        right: 8em;
+        top: 0.5em;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 1rem;
+        overflow: hidden;
+        display: none;
+    }
+
+    .notification span {
+        font-size: 0.5rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0.15em;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--white);
+    }
 
 
     /* MAIN */
@@ -109,6 +181,7 @@ body {
             /* background-color: rebeccapurple; */
         display: flex;
         justify-content: flex-end;
+        padding-left: 4em;
     }
 
     .my-slides.desktop {
@@ -130,12 +203,21 @@ body {
         border-radius: 15px;
     }
 
+    .main-image:hover {
+        border: 3px solid var(--orange);
+    }
+
     .sub-image {
         width: 100%;
-        height: 100%; 
+        height: 90%; 
         object-fit: cover;
         border-radius: 15px;
         
+    }
+
+    .sub-image:hover {
+        filter: opacity(60%);
+        border: 3px solid var(--orange);
     }
 
     .images-product {
@@ -242,4 +324,58 @@ body {
         flex: 2;
     }
 
+    .overlay {
+
+    }
+
+    .my-slides.desktop.pop-up {
+        position: fixed;    
+        bottom: 5em;
+        z-index: 14;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+
+
+        background-color: transparent;
+    }
+
+    .circle-button {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .next-btn {
+        right: -1.5em;
+    }
+
+    .prev-btn {
+        left: -1.5em;
+    }
+
+    /* .close-btn {
+        position: absolute;
+        right: 0;
+        width: 20px;
+        height: auto;
+        top: -2em;
+        filter: sepia(200%) brightness(150%);;
+    } */
+
+    .close-icon {
+        background-image: url('../images/icon-close.svg'); /* Path to your custom icon file */
+        background-size: cover;
+        
+        width: 18px; 
+        height: 18px; 
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -2.5em;
+        cursor: pointer;
+    }
 }

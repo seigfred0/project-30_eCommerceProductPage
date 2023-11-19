@@ -195,3 +195,22 @@ document.addEventListener('selectstart', (event) => {
 
 
 
+// Desktop Pop Up
+
+function popUpDisplay() {
+    
+    const closeBtn = document.querySelector('.close-icon');
+    const overlay = document.querySelector('.overlay');
+    const popUp = document.querySelector('.pop-up');
+
+
+
+
+
+
+    
+    closeBtn.addEventListener("click", () => {
+        overlay.style.display = 'none';
+        popUp.style.display = 'none';
+    });
+}

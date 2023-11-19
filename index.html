@@ -17,106 +17,125 @@
  
 </head>
 <body>
-<div class="maxWidth">
-
-  <div class="overlay"></div>
-  <nav>
-    <div class="burger-icon openBtn">
-      <i class="fas fa-bars fa-lg custom-icon"></i>
-    </div>
-
-    <!-- Side Nav -->
-    <div class="sideNav">
-      <img class="closeBtn" src="images/icon-close.svg" alt="">
-      <a href="#">Collections</a>
-      <a href="#">Men</a>
-      <a href="#">Women</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-
-    <div class="nav-logo align">
-      <img src="images/logo.svg" alt="">
-    </div>
-
-    <div class="nav-customer_profile align">
-      <svg width="22" height="20" id="cartBtn" class="icon">
-        <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" onselectstart="false" fill-rule="nonzero"/>
-      </svg>
-      <div class="notification">
-        <span id="notification-counter">3</span>
+  <div class="maxWidth">
+    <div class="overlay mobile"></div>
+    
+    <nav>
+      <div class="burger-icon openBtn mobile">
+        <i class="fas fa-bars fa-lg custom-icon"></i>
       </div>
-      <img id="avatar" src="images/image-avatar.png" alt="">
-    </div>
 
-   
-  </nav>
+      <!-- Side Nav -->
+      <div class="sideNav mobile">
+        <img class="closeBtn" src="images/icon-close.svg" alt="">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
 
-  <!-- Image section -->
-  <main>
-    <section class="images">
-      <!--cart section-->
-      <div class="cart-container">
-        <h1>Cart</h1>
-        <hr>
-        <p id="emptyCart">Your cart is empty</p>
-        <div class="cart-product">
-          
-          
-          <!-- <div class="selected-product">
-            <img class="basket-pic" src="images/image-product-1.jpg" alt="">
-            <div class="product-info">
-              <p>Fall Limited Edition Sneaker</p>
-              <p>$125.00 x 3 <span class="heavy total-price">$375.00</span></p>
-            </div>
-            <div class="product-delete">
-              <img class="icon" src="images/icon-delete.svg" alt="">
-            </div>
-          </div>
-          <button id="checkoutBtn" class="checkout">Checkout</button> -->
-        </div>
-      </div> 
-      <!-- cart section end -->
+      
+      <div class="nav-logo align">
+        <img src="images/logo.svg" alt="">
+      </div>
 
-      <div class="my-slides">
-        <img class="imagesProduct" src="images/image-product-1.jpg" alt="">
+      <div class="nav-desktop desktop">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </div>
       
-
-      <button class="circle-button prev-btn" id="prevBtn">
-        <div class="icon2 previousIcon" ></div>
-      </button>
-      <button class="circle-button next-btn" id="nextBtn">
-        <div class="icon2 nextIcon" div>
-      </button>
-    </section> 
-
-
-    <section class="text">
-      <div class="text-description">
-        <span>Sneaker Company</span>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, theyll withstand everything the weather can offer.</p>
+      <div class="nav-customer_profile align">
+        <svg width="22" height="20" id="cartBtn" class="icon">
+          <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" onselectstart="false" fill-rule="nonzero"/>
+        </svg>
+        <div class="notification">
+          <span id="notification-counter"></span>
+        </div>
+        <img id="avatar" src="images/image-avatar.png" alt="">
       </div>
-      <div class="text-pricing">
-        <div class="text-pricing_price">
-          <span class="product-price">$125.00</span>
-          <span class="product-discount">50%</span>
-          <span class="product-markdown">$250.00</span>
+    </nav>
+
+    <!-- Image section -->
+    <main>
+      <section class="images">
+        <!--cart section-->
+        <div class="cart-container">
+          <h1>Cart</h1>
+          <hr>
+          <p id="emptyCart">Your cart is empty</p>
+          <div class="cart-product">
+          </div>
+        </div> 
+        <!-- cart section end -->
+
+        <div class="my-slides mobile">
+          <img class="imagesProduct mobile" src="images/image-product-1.jpg" alt="">
         </div>
-        <div class="text-pricing_counter">
-          <div class="minus"></div>
-          <p class="count">0</p>
-          <div class="plus"></div>
+
+        <div class="my-slides desktop">
+          <div class="images-product img0">
+            <img class="main-image" src="images/image-product-1.jpg" alt="">
+          </div>
+
+          <div class="images-product img1">
+            <img class="sub-image" src="images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+
+          <div class="images-product img2">
+            <img class="sub-image" src="images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+
+          <div class="images-product img2">
+            <img class="sub-image" src="images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+
+          <div class="images-product img2">
+            <img class="sub-image" src="images/image-product-4-thumbnail.jpg" alt="">
+          </div>
         </div>
-        <button class="text-pricing_button" id="addToCartBtn">
-          <img src="./images/icon-cart.svg" alt="">
-          <span>Add to cart</span>
+        
+
+        <button class="circle-button prev-btn mobile" id="prevBtn">
+          <div class="icon2 previousIcon" ></div>
         </button>
-      </div>
-    </section>
-  </main>
-</div>
+        <button class="circle-button next-btn mobile" id="nextBtn">
+          <div class="icon2 nextIcon" div>
+        </button>
+      </section> 
+
+
+      <section class="text">
+        <div class="text-description">
+          <span>Sneaker Company</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, theyll withstand everything the weather can offer.</p>
+        </div>
+        <div class="text-pricing">
+          <div class="text-pricing_price">
+            <span class="product-price">$125.00</span>
+            <span class="product-discount">50%</span> 
+            <span class="product-markdown">$250.00</span>
+          </div>
+
+          <div class="divide">
+            <div class="text-pricing_counter">
+              <div class="minus"></div>
+              <p class="count">0</p>
+              <div class="plus"></div>
+            </div>
+            <button class="text-pricing_button" id="addToCartBtn">
+              <img src="./images/icon-cart.svg" alt="">
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 
 
   <!-- Collections

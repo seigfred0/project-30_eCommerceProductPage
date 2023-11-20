@@ -18,8 +18,8 @@
 </head>
 <body>
   <div class="maxWidth">
-    <!-- <div class="overlay mobile"></div> -->
-    <div class="overlay "></div>
+    <div class="overlay mobile"></div>
+    <div class="overlay desktop "></div>
 
     <nav>
       <div class="burger-icon openBtn mobile">
@@ -72,23 +72,12 @@
     <!-- Image section -->
     <main>
       <section class="images">
-        <!--cart section-->
-        <!-- <div class="cart-container mobile">
-          <h1>Cart</h1>
-          <hr>
-          <p id="emptyCart">Your cart is empty</p>
-          <div class="cart-product">
-          </div>
-        </div>  -->
-        <!-- cart section end -->
-        
-
         <div class="my-slides mobile">
           <img class="imagesProduct mobile" src="images/image-product-1.jpg" alt="">
         </div>
 
         <div class="my-slides desktop">
-          <div class="images-product img0">
+          <div class="images-product img0 clickable-image">
             <img class="main-image" src="images/image-product-1.jpg" alt="">
           </div>
 
@@ -115,39 +104,34 @@
 
         <div class="my-slides desktop pop-up">
           <div class="close-icon">
-              
           </div>
           
           <div class="images-product img0">
-            <img class="main-image" src="images/image-product-1.jpg" alt="">
+            <img class="main-image popUp" src="images/image-product-1.jpg" alt="">
           </div>
 
           <div class="images-product img1">
-            <img class="sub-image" src="images/image-product-1-thumbnail.jpg" alt="">
+            <img class="sub-image desk" src="images/image-product-1-thumbnail.jpg" alt="">
           </div>
 
           <div class="images-product img2">
-            <img class="sub-image" src="images/image-product-2-thumbnail.jpg" alt="">
+            <img class="sub-image desk" src="images/image-product-2-thumbnail.jpg" alt="">
           </div>
 
           <div class="images-product img2">
-            <img class="sub-image" src="images/image-product-3-thumbnail.jpg" alt="">
+            <img class="sub-image desk" src="images/image-product-3-thumbnail.jpg" alt="">
           </div>
 
           <div class="images-product img2">
-            <img class="sub-image" src="images/image-product-4-thumbnail.jpg" alt="">
+            <img class="sub-image desk"  src="images/image-product-4-thumbnail.jpg" alt="">
           </div>
 
-          <button class="circle-button prev-btn " id="prevBtn">
+          <button class="circle-button prev-btn " id="prevBtn-desktop">
             <div class="icon2 previousIcon" ></div>
           </button>
-          <button class="circle-button next-btn " id="nextBtn">
+          <button class="circle-button next-btn " id="nextBtn-desktop">
             <div class="icon2 nextIcon" div>
           </button>
-
-          
-          
-          
         </div>
 
         
@@ -189,23 +173,6 @@
       </section>
     </main>
   </div>
-
-
-  <!-- Collections
-  Men
-  Women
-  About
-  Contact
-
-    GOT EXPOSED TO CSS FILTER
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-   -->
    <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }

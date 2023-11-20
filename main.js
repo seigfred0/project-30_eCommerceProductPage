@@ -197,20 +197,67 @@ document.addEventListener('selectstart', (event) => {
 
 // Desktop Pop Up
 
+const popUpBtn = document.querySelector('.clickable-image');
+popUpBtn.addEventListener('click', popUpDisplay)
+
 function popUpDisplay() {
-    
+    const imagesDesktop = [
+        'images/image-product-1.jpg',
+        'images/image-product-2.jpg',
+        'images/image-product-3.jpg',
+        'images/image-product-4.jpg',
+    ];
+
     const closeBtn = document.querySelector('.close-icon');
-    const overlay = document.querySelector('.overlay');
-    const popUp = document.querySelector('.pop-up');
+    const overlay = document.querySelector('.overlay.desktop');
+    const popUp = document.querySelector('.my-slides.pop-up');
+    const prevBtnDesktop = document.querySelector('#prevBtn-desktop');
+    const nextBtnDesktop = document.querySelector('#nextBtn-desktop');
+    const mainImage = document.querySelector('.main-image.popUp');
+    let presentIndex = 0;
 
-
-
-
-
-
+    overlay.style.display = 'block';
+    popUp.style.display = 'grid';
     
+    // Sub Images Functionality
+    const subImages = document.querySelectorAll('.sub-image.desk');
+    subImages.forEach((image) => {
+        image.addEventListener('click', replaceImage)
+    })
+   
+
+    prevBtnDesktop.addEventListener('click', () => {
+        presentIndex = (presentIndex - 1 + imagesDesktop.length) % imagesDesktop.length;
+        prevImageDesktop(mainImage, imagesDesktop, presentIndex);
+        console.log(presentIndex);
+    });
+    
+    nextBtnDesktop.addEventListener('click', () => {
+        presentIndex = (presentIndex + 1) % imagesDesktop.length;
+        nextImageDesktop(mainImage, imagesDesktop, presentIndex);
+        console.log(presentIndex);
+    });
+
     closeBtn.addEventListener("click", () => {
         overlay.style.display = 'none';
         popUp.style.display = 'none';
     });
+}
+
+function prevImageDesktop(mainImage, imagesDesktop, presentIndex) {
+    mainImage.src = imagesDesktop[presentIndex];
+}
+
+function nextImageDesktop(mainImage, imagesDesktop, presentIndex) {
+    mainImage.src = imagesDesktop[presentIndex];
+}
+
+
+function replaceImage() {
+    let imageSrc = this.src
+    let modifiedSrc = imageSrc.replace('-thumbnail', '')
+    let mainPic = document.querySelector('.main-image.popUp');
+
+
+    mainPic.src = modifiedSrc   
 }

@@ -15,3 +15,5 @@ I had fun building this project. It took me a week to finish, not the best when 
 - I learned to use SVG and how to manipulate them
 
 
+## Project Link
+- [Project Link](https://seigfred0.github.io/project-30_eCommerceProductPage/)
